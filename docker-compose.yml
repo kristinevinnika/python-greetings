@@ -1,0 +1,21 @@
+services:
+  greetings-app-dev:
+    build: .
+    image: kvinnika/python-greetings-app:latest
+    container_name: greetings-app-dev
+    ports:
+      - 7001:3000
+  greetings-app-stg:
+    build: .
+    image: kvinnika/python-greetings-app:latest
+    container_name: greetings-app-stg
+    ports:
+      - 7002:3000
+  greetings-app-prod:
+    build: .
+    image: kvinnika/python-greetings-app:latest
+    container_name: greetings-app-prod
+    ports:
+      - 7003:3000
+
+# docker run --rm -p 3000:3000 kvinnika/python-greetings-app
