@@ -30,14 +30,14 @@ pipeline {
                 runApiTests("stg")
             }
         }
-        stage('deploy-to-prd') {
+        stage('deploy-to-prod') {
             steps {
-                deploy("prd")
+                deploy("prod")
             }
         }
-        stage('tests-on-prd') {
+        stage('tests-on-prod') {
             steps {
-                runApiTests("prd")
+                runApiTests("prod")
             }
         }
     }
